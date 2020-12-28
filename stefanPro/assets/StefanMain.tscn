@@ -1,0 +1,354 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://addons/rmsmartshape/vertex_properties.gd" type="Script" id=1]
+[ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=2]
+[ext_resource path="res://addons/rmsmartshape/shapes/point.gd" type="Script" id=3]
+[ext_resource path="res://addons/rmsmartshape/shapes/point_array.gd" type="Script" id=4]
+[ext_resource path="res://addons/rmsmartshape/shapes/shape_open.gd" type="Script" id=5]
+[ext_resource path="res://addons/rmsmartshape/normal_range.gd" type="Script" id=6]
+[ext_resource path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" type="Script" id=7]
+[ext_resource path="res://addons/rmsmartshape/materials/edge_material.gd" type="Script" id=8]
+[ext_resource path="res://assets/gardener/gardener_ske.json" type="GDDragonBonesResource" id=9]
+[ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=10]
+[ext_resource path="res://assets/grassTop.png" type="Texture" id=11]
+[ext_resource path="res://assets/grassTexture.png" type="Texture" id=12]
+[ext_resource path="res://assets/gardener/gardener_tex.png" type="Texture" id=13]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=14]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 0.5
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+position = Vector2( 811.638, 282.972 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1 )
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+position = Vector2( -412.698, 178.058 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 3 )
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 0.5
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 3 )
+position = Vector2( 811.638, 282.972 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 5 )
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 0.9
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 3 )
+position = Vector2( 822.445, 188.846 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 7 )
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 3 )
+position = Vector2( -425.024, 281.792 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 9 )
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 3 )
+position = Vector2( -46.3103, -29.2617 )
+point_in = Vector2( -410.357, 40.363 )
+point_out = Vector2( 185.865, 13.5151 )
+properties = SubResource( 11 )
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 3 )
+position = Vector2( 328.041, 140.375 )
+point_in = Vector2( -62.8578, -89.797 )
+point_out = Vector2( 62.8578, 89.797 )
+properties = SubResource( 13 )
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 4 )
+_points = {
+0: SubResource( 2 ),
+1: SubResource( 4 ),
+3: SubResource( 6 ),
+4: SubResource( 8 ),
+5: SubResource( 10 ),
+6: SubResource( 12 ),
+7: SubResource( 14 )
+}
+_point_order = [ 3, 5, 1, 6, 7, 4, 0 ]
+_constraints = {
+[ 0, 3 ]: 15
+}
+_next_key = 8
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 8 )
+textures = [ ExtResource( 11 ) ]
+texture_normals = [  ]
+textures_corner_outer = [  ]
+textures_corner_inner = [  ]
+texture_normals_corner_outer = [  ]
+texture_normals_corner_inner = [  ]
+textures_taper_left = [  ]
+textures_taper_right = [  ]
+texture_normals_taper_left = [  ]
+texture_normals_taper_right = [  ]
+use_corner_texture = true
+use_taper_texture = true
+fit_mode = 0
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 6 )
+begin = 0.0
+end = 120.0
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 7 )
+edge_material = SubResource( 16 )
+normal_range = SubResource( 17 )
+weld = true
+render = true
+z_index = 0
+offset = 0.0
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 2 )
+_edge_meta_materials = [ SubResource( 18 ) ]
+fill_textures = [ ExtResource( 12 ) ]
+fill_texture_normals = [  ]
+fill_texture_z_index = -10
+fill_mesh_offset = 0.0
+render_offset = 0.0
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 3 )
+position = Vector2( -1146.98, 152.393 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 20 )
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=23]
+script = ExtResource( 3 )
+position = Vector2( -715.456, 116.157 )
+point_in = Vector2( -156.683, 103.826 )
+point_out = Vector2( 156.683, -103.826 )
+properties = SubResource( 22 )
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 3 )
+position = Vector2( -183.94, -229.901 )
+point_in = Vector2( -218.979, 5.66327 )
+point_out = Vector2( 218.979, -5.66327 )
+properties = SubResource( 24 )
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 3 )
+position = Vector2( 240.713, -79.3023 )
+point_in = Vector2( -307.862, 68.6166 )
+point_out = Vector2( 191.321, 147.514 )
+properties = SubResource( 26 )
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 1 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 3 )
+position = Vector2( 615.078, -204.29 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 28 )
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 4 )
+_points = {
+0: SubResource( 21 ),
+1: SubResource( 23 ),
+2: SubResource( 25 ),
+3: SubResource( 27 ),
+4: SubResource( 29 )
+}
+_point_order = [ 0, 1, 2, 3, 4 ]
+_constraints = {
+
+}
+_next_key = 0
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 8 )
+textures = [ ExtResource( 11 ) ]
+texture_normals = [  ]
+textures_corner_outer = [  ]
+textures_corner_inner = [  ]
+texture_normals_corner_outer = [  ]
+texture_normals_corner_inner = [  ]
+textures_taper_left = [  ]
+textures_taper_right = [  ]
+texture_normals_taper_left = [  ]
+texture_normals_taper_right = [  ]
+use_corner_texture = true
+use_taper_texture = true
+fit_mode = 0
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 6 )
+begin = 0.0
+end = 0.0
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 7 )
+edge_material = SubResource( 31 )
+normal_range = SubResource( 32 )
+weld = true
+render = true
+z_index = 0
+offset = 0.0
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 2 )
+_edge_meta_materials = [ SubResource( 33 ) ]
+fill_textures = [  ]
+fill_texture_normals = [  ]
+fill_texture_z_index = -10
+fill_mesh_offset = 0.0
+render_offset = 0.0
+
+[sub_resource type="CapsuleShape2D" id=35]
+radius = 30.0176
+height = 100.133
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="SS2D_Shape_Closed" type="Node2D" parent="StaticBody2D"]
+script = ExtResource( 10 )
+curve_bake_interval = 20.0
+_points = SubResource( 15 )
+material_overrides = {
+
+}
+shape_material = SubResource( 19 )
+tessellation_stages = 5
+tessellation_tolerence = 4.0
+flip_edges = false
+render_edges = true
+collision_size = 32.0
+collision_offset = 0.0
+collision_polygon_node_path = NodePath("../CollisionPolygon2D")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+modulate = Color( 1, 1, 1, 0.3 )
+polygon = PoolVector2Array( 813.833, 280.894, -428.272, 279.042, -411.909, 178.023, -412.857, 176.133, -413.743, 170.801, -414.061, 162.384, -413.185, 151.336, -410.392, 138.098, -408.054, 130.793, -404.98, 123.099, -401.069, 115.071, -396.228, 106.764, -390.368, 98.2317, -383.406, 89.5186, -365.773, 71.7982, -342.587, 54.0489, -313.134, 36.6879, -276.684, 20.1441, -232.507, 4.8468, -179.875, -8.78485, -46.3131, -29.4006, 20.5627, -21.7892, 81.7586, -9.69835, 137.249, 6.65556, 187.004, 26.9289, 230.994, 50.7781, 269.189, 77.86, 301.548, 107.843, 315.529, 123.813, 328.042, 140.374, 331.216, 144.526, 334.864, 148.549, 339.023, 152.412, 343.694, 156.104, 354.497, 162.852, 367.057, 168.935, 396.773, 179.059, 431.641, 186.864, 512.009, 196.369, 598.822, 199.63, 825.39, 185.99 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 593.571, -191.652 )
+
+[node name="SS2D_Shape_Open" type="Node2D" parent="StaticBody2D2"]
+rotation = 0.0162266
+script = ExtResource( 5 )
+editor_debug = false
+curve_bake_interval = 20.0
+_points = SubResource( 30 )
+material_overrides = {
+
+}
+shape_material = SubResource( 34 )
+tessellation_stages = 5
+tessellation_tolerence = 4.0
+flip_edges = false
+render_edges = true
+collision_size = 32.0
+collision_offset = 0.0
+collision_polygon_node_path = NodePath("../CollisionPolygon2D")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+visible = false
+modulate = Color( 1, 1, 1, 0.3 )
+polygon = PoolVector2Array( -1149.3, 133.762, -1104.06, 143.42, -992.652, 157.101, -923.538, 158.262, -851.561, 151.802, -815.922, 144.821, -781.281, 134.844, -748.206, 121.524, -717.264, 104.505, -657.7, 61.0347, -471.483, -101.354, -404.629, -151.889, -369.92, -174.075, -334.248, -193.503, -297.525, -209.633, -259.663, -221.931, -220.579, -229.862, -180.186, -232.874, -160.579, -232.419, -142.74, -230.748, -126.533, -227.944, -111.824, -224.101, -98.4757, -219.311, -86.3546, -213.67, -75.3253, -207.27, -65.2442, -200.215, -47.4201, -184.473, -31.8071, -167.19, -2.81451, -131.061, 12.733, -113.716, 30.4035, -97.8307, 40.3722, -90.6664, 51.2883, -84.1599, 63.2796, -78.3953, 76.4818, -73.466, 91.0306, -69.466, 107.062, -66.4895, 124.711, -64.6306, 144.114, -63.9929, 188.72, -66.715, 242.255, -76.5903, 259.676, -62.4908, 277.333, -51.9195, 294.912, -43.5567, 312.38, -37.2759, 329.703, -32.9506, 346.847, -30.4545, 363.778, -29.6614, 380.463, -30.4454, 396.867, -32.6806, 412.953, -36.2531, 444.047, -46.8541, 473.479, -61.2236, 500.962, -78.383, 549.024, -116.975, 586.058, -154.54, 618.312, -194.283, 643.166, -174.127, 609.909, -133.206, 570.474, -93.2278, 519.483, -52.2877, 488.995, -33.2369, 456.255, -17.2744, 421.585, -5.43929, 402.493, -1.17894, 383.381, 1.42126, 363.784, 2.33856, 343.792, 1.39931, 323.515, -1.55464, 303.078, -6.65768, 282.609, -14.0165, 262.221, -23.7125, 242.01, -35.8094, 234.83, -45.4637, 192.276, -34.9131, 144.556, -31.996, 122.504, -32.7068, 102.466, -34.8214, 83.8654, -38.2785, 66.6362, -43.0182, 50.7379, -48.9554, 36.1467, -55.969, 22.8355, -63.8995, 10.3491, -72.8944, -9.91962, -91.1135, -27.2242, -110.369, -56.1609, -146.432, -69.9113, -161.71, -85.0514, -175.082, -92.5546, -180.304, -101.15, -185.295, -110.644, -189.715, -121.283, -193.531, -133.315, -196.671, -146.967, -199.028, -162.439, -200.473, -179.355, -200.885, -216.196, -198.164, -251.53, -190.982, -286.137, -179.728, -320.152, -164.775, -353.641, -146.525, -386.349, -125.624, -451.306, -76.5163, -637.73, 86.0386, -700.084, 131.502, -734.498, 150.439, -770.868, 165.103, -808.411, 175.927, -847.045, 183.481, -922.374, 190.241, -994.875, 189.024, -1109.36, 174.978, -1155.99, 165.054 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( -326.576, -171.213 )
+script = ExtResource( 14 )
+
+[node name="GDDragonBones" type="GDDragonBones" parent="KinematicBody2D"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 13 )
+resource = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -5.15906, 7.54015 )
+shape = SubResource( 35 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+current = true
+zoom = Vector2( 0.8, 0.8 )
