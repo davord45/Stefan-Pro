@@ -12,20 +12,20 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("ui_left"):
 		velocity.x = -WALK_SPEED
-		if($GDDragonBones.get("playback/curr_animation") != "moving"):
-			$GDDragonBones.stop_all()
-			$GDDragonBones.set("playback/curr_animation", "moving")
-			$GDDragonBones.set("playback/loop", -1)
-			$GDDragonBones.set("playback/speed", 1)
-			$GDDragonBones.play(true)
+		if($Gardener.get("playback/curr_animation") != "moving"):
+			$Gardener.stop_all()
+			$Gardener.set("playback/curr_animation", "moving")
+			$Gardener.set("playback/loop", -1)
+			$Gardener.set("playback/speed", 1)
+			$Gardener.play(true)
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x =  WALK_SPEED
-		if($GDDragonBones.get("playback/curr_animation") != "moving"):
-			$GDDragonBones.stop_all()
-			$GDDragonBones.set("playback/curr_animation", "moving")
-			$GDDragonBones.set("playback/loop", -1)
-			$GDDragonBones.set("playback/speed", 1)
-			$GDDragonBones.play(true)
+		if($Gardener.get("playback/curr_animation") != "moving"):
+			$Gardener.stop_all()
+			$Gardener.set("playback/curr_animation", "moving")
+			$Gardener.set("playback/loop", -1)
+			$Gardener.set("playback/speed", 1)
+			$Gardener.play(true)
 	else:
 		velocity.x = 0
 
