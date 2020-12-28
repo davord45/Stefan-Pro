@@ -9,21 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "HBoxContainer",
-"class": "ContributorClass",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/ContributorClass.gd"
-}, {
-"base": "PanelContainer",
-"class": "GistItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/GistItem.gd"
-}, {
-"base": "HBoxContainer",
-"class": "InvitationItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/InvitationItem.gd"
-}, {
 "base": "Resource",
 "class": "RMS2D_Material",
 "language": "GDScript",
@@ -48,11 +33,6 @@ _global_script_classes=[ {
 "class": "RMSmartShapeAnchor2D",
 "language": "GDScript",
 "path": "res://addons/rmsmartshape/RMSmartShapeAnchor2D.gd"
-}, {
-"base": "PanelContainer",
-"class": "RepositoryItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
 }, {
 "base": "Node",
 "class": "SS2D_Common_Functions",
@@ -150,15 +130,11 @@ _global_script_classes=[ {
 "path": "res://addons/rmsmartshape/vertex_properties.gd"
 } ]
 _global_script_class_icons={
-"ContributorClass": "",
-"GistItem": "",
-"InvitationItem": "",
 "RMS2D_Material": "",
 "RMS2D_VertexProperties": "",
 "RMS2D_VertexPropertiesArray": "",
 "RMSmartShape2D": "res://addons/rmsmartshape/assets/LEGACY_shape.png",
 "RMSmartShapeAnchor2D": "res://addons/rmsmartshape/assets/LEGACY_shape_anchor.png",
-"RepositoryItem": "",
 "SS2D_Common_Functions": "",
 "SS2D_Edge": "",
 "SS2D_Material_Edge": "",
@@ -183,6 +159,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Stefan Pro"
+run/main_scene="res://assets/StefanMain.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -194,7 +171,7 @@ RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "github-integration", "rmsmartshape" )
+enabled=PoolStringArray( "rmsmartshape" )
 
 [rendering]
 
